@@ -6,6 +6,7 @@ use App\Http\Livewire\Admin\CastIndex;
 use App\Http\Livewire\Admin\MovieIndex;
 use App\Http\Livewire\Admin\SerieIndex;
 use App\Http\Livewire\Admin\GenreIndex;
+use App\Http\Livewire\Admin\SeasonIndex;
 use App\Http\Livewire\Admin\TagIndex;
 
 /*
@@ -36,6 +37,7 @@ Route::middleware(['auth:sanctum','verified', 'role:admin' ])->prefix('admin')->
     Route::get('genres',GenreIndex::class)->name('genres.index');
     Route::get('casts',CastIndex::class)->name('casts.index');
     Route::get('tags',TagIndex::class)->name('tags.index');
+    Route::get('seasons',SeasonIndex::class)->name('seasons.index');
 
 });
 

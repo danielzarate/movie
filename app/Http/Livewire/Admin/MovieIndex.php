@@ -8,7 +8,7 @@ use App\Models\Movie;
 class MovieIndex extends Component
 {
 
-
+    public $open=false;
 
     public function render()
     {

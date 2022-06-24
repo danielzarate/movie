@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use App\Models\Season;
 
 class SeasonIndex extends Component
 {
     public function render()
     {
-        return view('livewire.admin.season-index')->layout('layouts.admin');
+        $seasons=Season::all();
+        return view('livewire.admin.season-index',compact('seasons'))->layout('layouts.admin');
     }
 }
